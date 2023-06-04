@@ -1,66 +1,51 @@
 import requests
-from pyrogram import filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
+from telegram.ext import CallbackContext
+from telegram.ext.dispatcher import run_async
 
-from MukeshRobot import BOT_NAME, BOT_USERNAME
-from MukeshRobot import pbot as mukesh
+from MukeshRobot import BOT_NAME, BOT_USERNAME, dispatcher
+from MukeshRobot.modules.disable import DisableAbleCommandHandler
 
 
-@mukesh.on_message(filters.command("write"))
-async def handwrite(_, message: Message):
-    if not message.reply_to_message:
-        text = message.text.split(None, 1)[1]
-        m = await mukesh.send_message(
-            message.chat.id, "`Please wait...,\n\nWriting your text...`"
-        )
-        API = f"https://api.sdbots.tk/write?text={text}"
-        req = requests.get(API).url
-        caption = f"""
-sᴜᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
-
-✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [{BOT_NAME}](https://t.me/{BOT_USERNAME})
-🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
-❄ **ʟɪɴᴋ :** `{req}`
-"""
-        await m.delete()
-        await mukesh.send_photo(
-            message.chat.id,
-            photo=req,
-            caption=caption,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("• ᴛᴇʟᴇɢʀᴀᴩʜ •", url=f"{req}")]]
-            ),
-        )
+@run_async
+def handwrite(update: Update, context: CallbackContext):
+    message = update.effective_message
+    if message.reply_to_message:
+        text = message.reply_to_message.text
     else:
-        lol = message.reply_to_message.text
-        m = await mukesh.send_message(
-            message.chat.id, "`Please wait...,\n\nWriting your text...`"
-        )
-        API = f"https://api.sdbots.tk/write?text={lol}"
-        req = requests.get(API).url
-        caption = f"""
-sᴜᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
+        text = update.effective_message.text.split(None, 1)[1]
+    m = message.reply_text("Writing the text...")
+    req = requests.get(f"https://api.sdbots.tk/write?text={text}").url
+    message.reply_photo(
+        photo=req,
+        caption=f"""
+Successfully Written Text 💘
 
-✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [{BOT_NAME}](https://t.me/{BOT_USERNAME})
-🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
-❄ **ʟɪɴᴋ :** `{req}`
-"""
-        await m.delete()
-        await mukesh.send_photo(
-            message.chat.id,
-            photo=req,
-            caption=caption,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("• ᴛᴇʟᴇɢʀᴀᴩʜ •", url=f"{req}")]]
-            ),
-        )
+✨ **Written By :** [{BOT_NAME}](https://t.me/{BOT_USERNAME})
+🥀 **Requested by :** {update.effective_user.first_name}
+❄ **Link :** `{req}`""",
+        parse_mode=ParseMode.MARKDOWN,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("• ᴛᴇʟᴇɢʀᴀᴩʜ •", url=req),
+                ],
+            ]
+        ),
+    )
+    m.delete()
 
-
-__mod_name__ = "⍟ WʀɪᴛᴇTᴏᴏʟ ⍟"
 
 __help__ = """
+ Writes the given text on white page with a pen 🖊
 
- ᴡʀɪᴛᴇs ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴏɴ ᴡʜɪᴛᴇ ᴘᴀɢᴇ ᴡɪᴛʜ ᴀ ᴘᴇɴ 🖊
+❍ /write <text> *:* Writes the given text.
+"""
 
-❍ /write <ᴛᴇxᴛ> *:* ᴡʀɪᴛᴇs ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ.
- """
+WRITE_HANDLER = DisableAbleCommandHandler("write", handwrite)
+
+dispatcher.add_handler(WRITE_HANDLER)
+
+__mod_name__ = "WʀɪᴛᴇTᴏᴏʟ"
+__command_list__ = ["write"]
+__handlers__ = [WRITE_HANDLER]
