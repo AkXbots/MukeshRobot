@@ -41,6 +41,6 @@ def reverse(update: Update, context: CallbackContext):
 
 
 reverse_cmd = CommandHandler(
-    ["grs", "reverse", "pp", "p", "P", "grab"], reverse, run_async=True
+    ["grs", "reverse", "pp", "p", "P", "grab"], 
 )
 dispatcher.add_handler(reverse_cmd)
