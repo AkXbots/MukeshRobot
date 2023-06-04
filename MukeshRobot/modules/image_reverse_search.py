@@ -2,7 +2,7 @@ import requests
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler
 
-from NekoRobot import TOKEN, NEKO_PTB
+from MukeshRobot import TOKEN, dispatcher
 
 url = "https://google-reverse-image-api.vercel.app/reverse"
 
