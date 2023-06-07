@@ -97,12 +97,12 @@ buttons = [
         InlineKeyboardButton(text="📚 ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="🏡 ᴀʙᴏᴜᴛ 🏡 ", callback_data="mukesh_"),
-        InlineKeyboardButton(text="🚩 sᴜᴩᴩᴏʀᴛ 🚩", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="mukesh_"),
+        InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text="🥀ᴅᴇᴠᴇʟᴏᴩᴇʀ🥀", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="🎧 ᴍᴜsɪᴄ 🎧", callback_data="Music_"),
+        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="ᴍᴜsɪᴄ", callback_data="Music_"),
     ],
 ]
 
@@ -226,13 +226,13 @@ def start(update: Update, context: CallbackContext):
             lol = update.effective_message.reply_text(
                 PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
-            time.sleep(0.2)
+            time.sleep(0.3)
             lol.edit_text("💥")
-            time.sleep(0.2)
+            time.sleep(0.3)
             lol.edit_text("⚡")
-            time.sleep(0.2)
+            time.sleep(0.3)
             lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
-            time.sleep(0.2)
+            time.sleep(0.3)
             lol.delete()
             
             update.effective_message.reply_text(PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME,sql.num_users(),sql.num_chats()),
@@ -470,16 +470,16 @@ def Music_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="⋄ ᴀᴅᴍɪɴ ⋄", callback_data="Music_admin"
+                            text="ᴀᴅᴍɪɴ", callback_data="Music_admin"
                         ),
                         InlineKeyboardButton(
-                            text="⋄ ᴘʟᴀʏ ⋄", callback_data="Music_play"
+                            text="ᴘʟᴀʏ", callback_data="Music_play"
                         ),
                     ],
                     [
                         InlineKeyboardButton(text="⋄ ʙᴏᴛ ⋄", callback_data="Music_bot"),
                         InlineKeyboardButton(
-                            text="⋄ ᴇxᴛʀᴀ ⋄",
+                            text="ᴇxᴛʀᴀ",
                             callback_data="Music_extra",
                         ),
                     ],
