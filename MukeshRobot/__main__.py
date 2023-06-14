@@ -30,7 +30,7 @@ from telegram.utils.helpers import escape_markdown
 from telethon import __version__ as tlhver
 
 
-from StarRobot import (
+from MukeshRobot import (
     BOT_NAME,
     BOT_USERNAME,
     LOGGER,
