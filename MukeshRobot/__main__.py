@@ -77,7 +77,6 @@ PM_START_TEX = """
 
 PM_START_TEXT = """ 
 *ʜᴇʏ* {} , 🥀
-ʜᴇʏ 𝙹ᴀꜱʜᴀɴ ʙᴀʟ☙ , 🥀
 ๏ ɪ'ᴍ ᴛᴀᴛꜱᴜᴍᴀᴋɪ✨ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘs!
 
 ✪ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ғᴏʀ
@@ -100,10 +99,10 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="mukesh_"),
-        InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+        
     ],
     [
-        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"),
+        
         InlineKeyboardButton(text="ᴍᴜsɪᴄ", callback_data="Music_"),
     ],
 ]
@@ -400,18 +399,18 @@ def Mukesh_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴩᴩᴏʀᴛ", callback_data="mukesh_support"
+                            text=" sᴜᴩᴩᴏʀᴛ ", callback_data="Xd_Bots_Support"
                         ),
                         InlineKeyboardButton(
-                            text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"
+                            text=" ᴄᴏᴍᴍᴀɴᴅs ", callback_data="help_back"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
+                            text=" ᴅᴇᴠᴇʟᴏᴩᴇʀ ", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
-                            text="ᴜᴘᴅᴀᴛᴇꜱ",
+                            text=" ᴜᴘᴅᴀᴛᴇꜱ ",
                             url="https://t.me/Xd_Bots_Updates",
                         ),
                     ],
