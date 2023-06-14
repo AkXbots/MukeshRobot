@@ -97,21 +97,19 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="☆ 𝐀𝐝𝐝 𝐌𝐞 𝐌𝐨𝐢 𝐋𝐮𝐯 ☆",
+            text=" ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ",
             url=f"https://t.me/{dispatcher.bot.username}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="🚀 ʜᴇʟᴘ & ᴄᴍᴅs 🚀️‍🔥", callback_data="help_back"),
-        InlineKeyboardButton(text="✨ ᴍᴜsɪᴄ ✨", callback_data="Music_"),
+        InlineKeyboardButton(text="⚡ᴄᴏᴍᴍᴀɴᴅꜱ⚡", callback_data="help_back"),
+        InlineKeyboardButton(text="🎵 ᴍᴜsɪᴄ 🎵", callback_data="Music_"),
     ],
     [
-        InlineKeyboardButton(text="🌹sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ🌹", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="🥀ᴅᴇᴠᴇʟᴏᴩᴇʀ🥀", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="◆ sᴜᴩᴩᴏʀᴛ ◆", url=f"https://t.me/{SUPPORT_CHAT}"),
+        
     ],
-    [
-        InlineKeyboardButton(text="🏡 sᴏᴜʀᴄᴇ 🏡 ", callback_data="star_"),
-    ],
+    
 ]
 
 HELP_STRINGS = f"""
