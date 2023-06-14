@@ -95,16 +95,17 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="⚙️ ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
+        InlineKeyboardButton(text="⚙️ ᴄᴏᴍᴍᴀɴᴅs ", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="mukesh_"),
-        
+        InlineKeyboardButton(text=" ⚡ᴀʙᴏᴜᴛ⚡ ", callback_data="mukesh_"),
+        InInlineKeyboardButton(text=" ♬ᴍᴜsɪᴄ♬ ", callback_data="Music_"),
     ],
-    [
+    
         
-        InlineKeyboardButton(text="ᴍᴜsɪᴄ", callback_data="Music_"),
-    ],
+        
+        
+    
 ]
 
 HELP_STRINGS = f"""
