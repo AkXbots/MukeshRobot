@@ -526,7 +526,7 @@ __help__ = """
  ❍ `/strongwarn <ᴏɴ/ʏᴇs/ᴏғғ/ɴᴏ>`*:* ɪғ sᴇᴛ ᴛᴏ ᴏɴ, ᴇxᴄᴇᴇᴅɪɴɢ ᴛʜᴇ ᴡᴀʀɴ ʟɪᴍɪᴛ ᴡɪʟʟ ʀᴇsᴜʟᴛ ɪɴ ᴀ ʙᴀɴ. ᴇʟsᴇ, ᴡɪʟʟ ᴊᴜsᴛ ᴘᴜɴᴄʜ.
 """
 
-__mod_name__ = "⍟ Wᴀʀɴs ⍟"
+__mod_name__ = " Wᴀʀɴs "
 
 WARN_HANDLER = CommandHandler(["warn", "dwarn"], warn_user, filters=Filters.group)
 RESET_WARN_HANDLER = CommandHandler(
