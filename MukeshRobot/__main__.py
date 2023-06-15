@@ -135,7 +135,7 @@ for module_name in ALL_MODULES:
 
     if imported_module.__mod_name__.lower() not in IMPORTED:
         IMPORTED[imported_module.__mod_name__.lower()] = imported_module
-    else:
+    
         
 
     if hasattr(imported_module, "__help__") and imported_module.__help__:
