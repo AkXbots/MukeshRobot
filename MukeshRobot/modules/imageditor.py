@@ -90,7 +90,7 @@ async def photo(client: pbot, message: Message):
                     ],
                     [
                         InlineKeyboardButton(text=" Sᴛɪᴄᴋᴇʀ ", callback_data="stick"),
-                        InlineKeyboardButton(text="↩ Rᴏᴛᴀᴛᴇ ", callback_data="rotate"),
+                        InlineKeyboardButton(text=" Rᴏᴛᴀᴛᴇ ", callback_data="rotate"),
                         InlineKeyboardButton(
                             text=" Cᴏɴᴛʀᴀꜱᴛ ", callback_data="contrast"
                         ),
