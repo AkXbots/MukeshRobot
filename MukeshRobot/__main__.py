@@ -1134,7 +1134,7 @@ def main():
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
     about_callback_handler = CallbackQueryHandler(
-        Star_about_callback, pattern=r"star_"
+        mukesh_about_callback, pattern=r"mukesh_"
     )
     Music_callback_handler = CallbackQueryHandler(
         Music_about_callback, pattern=r"Music_"
