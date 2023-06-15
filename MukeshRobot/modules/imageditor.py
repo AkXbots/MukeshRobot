@@ -79,36 +79,36 @@ async def photo(client: pgram, message: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="💡 BRIGHT", callback_data="bright"),
-                        InlineKeyboardButton(text="🖼 MIXED", callback_data="mix"),
-                        InlineKeyboardButton(text="🔳 B&W", callback_data="b|w"),
+                        InlineKeyboardButton(text=" Bʀɪɢʜᴛ ", callback_data="bright"),
+                        InlineKeyboardButton(text=" Mɪxᴇᴅ ", callback_data="mix"),
+                        InlineKeyboardButton(text=" Bʟᴀᴄᴋ ᴀɴᴅ ᴡʜɪᴛᴇ ", callback_data="b|w"),
                     ],
                     [
-                        InlineKeyboardButton(text="🟡 CIRCLE", callback_data="circle"),
-                        InlineKeyboardButton(text="🩸 BLUR", callback_data="blur"),
-                        InlineKeyboardButton(text="🌌 BORDER", callback_data="border"),
+                        InlineKeyboardButton(text=" Cɪʀᴄʟᴇ ", callback_data="circle"),
+                        InlineKeyboardButton(text=" BLUR ", callback_data="blur"),
+                        InlineKeyboardButton(text=" BORDER ", callback_data="border"),
                     ],
                     [
-                        InlineKeyboardButton(text="🎉 STICKER", callback_data="stick"),
-                        InlineKeyboardButton(text="↩️ ROTATE", callback_data="rotate"),
+                        InlineKeyboardButton(text=" Sᴛɪᴄᴋᴇʀ ", callback_data="stick"),
+                        InlineKeyboardButton(text="↩ Rᴏᴛᴀᴛᴇ ", callback_data="rotate"),
                         InlineKeyboardButton(
-                            text="🔦 CONTRAST", callback_data="contrast"
+                            text=" Cᴏɴᴛʀᴀꜱᴛ ", callback_data="contrast"
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="🌇 SEPIA", callback_data="sepia"),
-                        InlineKeyboardButton(text="✏️ PENCIL", callback_data="pencil"),
-                        InlineKeyboardButton(text="🐶 CARTOON", callback_data="cartoon"),
+                        InlineKeyboardButton(text=" Sᴇᴘɪᴀ ", callback_data="sepia"),
+                        InlineKeyboardButton(text=" Pᴇɴᴄɪʟ ", callback_data="pencil"),
+                        InlineKeyboardButton(text=" Cᴀʀᴛᴏᴏɴ ", callback_data="cartoon"),
                     ],
                     [
-                        InlineKeyboardButton(text="🔄 INVERT", callback_data="inverted"),
-                        InlineKeyboardButton(text="🔮 GLITCH", callback_data="glitch"),
+                        InlineKeyboardButton(text=" Iɴᴠᴇʀᴛ ", callback_data="inverted"),
+                        InlineKeyboardButton(text=" Gʟɪᴛᴄʜ ", callback_data="glitch"),
                         InlineKeyboardButton(
-                            text="✂️ REMOVE BG", callback_data="removebg"
+                            text=" Rᴇᴍᴏᴠᴇ-Bɢ", callback_data="removebg"
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="❌ CLOSE", callback_data="close_e"),
+                        InlineKeyboardButton(text=" Cʟᴏꜱᴇ ", callback_data="close_e"),
                     ],
                 ]
             ),
