@@ -125,7 +125,7 @@ async def photo(client: pbot, message: Message):
 
 
 @pbot.on_callback_query()
-async def cb_handler(client: pgram, query: CallbackQuery):
+async def cb_handler(client: pbot, query: CallbackQuery):
     user_id = query.from_user.id
     if lel == user_id:
         if query.data == "removebg":
