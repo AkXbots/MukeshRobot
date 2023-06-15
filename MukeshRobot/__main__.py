@@ -380,9 +380,9 @@ def help_button(update, context):
 
 
 @run_async
-def Star_about_callback(update: Update, context: CallbackContext):
+def mukesh_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "star_":
+    if query.data == "mukesh_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
             text=f"*ʜᴇʏ,*🥀\n  *ᴛʜɪs ɪs {dispatcher.bot.first_name}*"
@@ -407,12 +407,12 @@ def Star_about_callback(update: Update, context: CallbackContext):
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="✯ вαϲк ✯", callback_data="star_back"),
+                        InlineKeyboardButton(text="✯ вαϲк ✯", callback_data="mukesh_back"),
                     ],
                 ]
             ),
         )
-    elif query.data == "star_back":
+    elif query.data == "mukesh_back":
         first_name = update.effective_user.first_name 
         query.message.edit_text(
             PM_START_TEXT.format(escape_markdown(first_name), (START_IMG), BOT_NAME),
