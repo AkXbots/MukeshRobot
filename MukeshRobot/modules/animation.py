@@ -328,4 +328,4 @@ __help__ = """
  ❍ /police - ᴛᴏ ᴄᴀʟʟ ᴍᴀsᴛᴇʀᴍɪɴᴅ ᴘᴏʟɪᴄᴇ
  ❍ ʙʏ ᴍᴜᴋᴇsʜ @Mukeshbotzone
 """
-__mod_name__ = "𝖦ᴀᴍᴇ"
+__mod_name__ = " Aɴɪᴍᴀᴛɪᴏɴ "
