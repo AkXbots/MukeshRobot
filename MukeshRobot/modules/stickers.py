@@ -28,7 +28,7 @@ import urllib.request as urllib
 import textwrap
 from PIL import Image, ImageFont, ImageDraw
 from html import escape
-from cloudscraper import CloudScraper
+
 from bs4 import BeautifulSoup
 from urllib.parse import quote as urlquote
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
