@@ -229,13 +229,13 @@ def start(update: Update, context: CallbackContext):
             lol = update.effective_message.reply_text(
                 PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
-            time.sleep(0.2)
+            time.sleep(0.1)
             lol.edit_text("💥")
-            time.sleep(0.2)
+            time.sleep(0.1)
             lol.edit_text("⚡")
-            time.sleep(0.2)
+            time.sleep(0.1)
             lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ...")
-            time.sleep(0.2)
+            time.sleep(0.1)
             lol.delete()
             
             update.effective_message.reply_text(
@@ -1101,17 +1101,17 @@ def main():
         try:
             dispatcher.bot.sendAnimation(
                 f"@{SUPPORT_CHAT}",
-                animation="https://telegra.ph/file/8dea393ddf4fc2e339179.gif",
+                animation="https://te.legra.ph/file/11c61a252cb708bb7a2ee.mp4",
                 caption=f"""
 ㅤ🥀 ✨ㅤ{dispatcher.bot.first_name} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ...
 
-━━━━━━━━━━━━━
+×⋆───────────────────⋆×
 ㅤ **ᴘʏᴛʜᴏɴ :** `{y()}`
    **ʟɪʙʀᴀʀʏ :** `{telever}`
    **ᴛᴇʟᴇᴛʜᴏɴ :** `{tlhver}`
 ㅤ **ᴩʏʀᴏɢʀᴀᴍ :** `{pyrover}`
+×⋆───────────────────⋆×
 
-━━━━━━━━━━━━━
 """,
                 parse_mode=ParseMode.MARKDOWN,
             )
